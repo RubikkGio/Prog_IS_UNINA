@@ -1,0 +1,103 @@
+2. Analisi e specifica dei requisiti
+
+2.1 Analisi nomi-verbi
+Si desidera sviluppare un sistema di prenotazione online per una catena di Bed & Breakfast (B&B) situati in diverse località turistiche. 
+Ogni B&B è caratterizzato da un nome, dal numero di posti letto, località, media delle recensioni, 
+costo giornaliero per il pernottamento ed elenco dei servizi aggiuntivi (quali la colazione, pulizia giornaliera, etc..),
+ caratterizzati anch’essi da un costo giornaliero.
+Il sistema, tramite opportuna interfaccia grafica, consentirà agli utenti registrati di visualizzare
+ l’elenco di tutti i B&B presenti nel sistema e di filtrarli in base alla loro località e poi eventualmente prenotarne uno,
+ per un determinato periodo, se nelle data specificate esso è disponibile .
+Il sistema deve anche consentire all’utente di visualizzare tutti i B&B liberi nelle date selezionate per poi poterlo prenotare. 
+Una prenotazione è caratterizzata da un ID, dal costo totale, dalla data e dal nome del cliente.
+ Una volta terminato un soggiorno prenotato, un cliente attraverso una opportuna interfaccia grafica
+ può dare una valutazione da 1 a 5 alla struttura in cui ha soggiornato.
+Un cliente può anche decidere di annullare una prenotazione senza alcun addebito,
+ purché l’annullamento avvenga almeno 48 ore prima della data del soggiorno, altrimenti gli verrà addebitato comunque il costo del soggiorno prenotato.
+ 
+Gli amministratori del sistema possono aggiungere, modificare o rimuovere B&B o servizi aggiuntivi.
+ Inoltre, gli amministratori, hanno accesso a report sulle prenotazioni e sulla struttura. 
+I report devono includere incassi totali in un dato intervallo di tempo, B&B che è stato affittato per più tempo,
+ e lista dei B&B con relative valutazioni degli utenti.
+ 
+
+2.2 Revisione dei requisiti
+	1	Ogni B&B è caratterizzato da un nome, dal numero di posti letto, località media delle recensioni, costo giornaliero per il pernottamento; 
+	2	Ogni B&B è caratterizzato da un elenco dei servizi aggiuntivi;
+	3	Ogni servizio aggiuntivo è caratterizzato da un costo giornaliero;
+	4	Il sistema deve offrire all’utente la possibilità di registrarsi;
+	5	Il sistema deve offrire all’utente un’interfaccia grafica;
+	6	Il sistema deve consentire agli utenti registrati ??? di visualizzare l’elenco di tutti i B&B presenti nel sistema;
+	7	Il sistema, durante la visualizzazione, deve consentire agli utenti registrati ??? di filtrare i B&B in base alla loro località;
+	8	Il sistema deve consentire agli utenti registrati di prenotare un B&B per un determinato periodo se nelle date specificate esso è disponibile;
+	9	Il sistema deve consentire all’utente (sempre registrato o a tutti??) di visualizzare tutti i B&B liberi nelle date selezionate;
+	10	Una prenotazione è caratterizzata da un ID, dal costo totale, dalla data e dal nome del cliente;
+	11	Un cliente, una volta terminato un soggiorno prenotato, può dare una valutazione da 1 a 5 alla struttura in cui ha soggiornato;
+	12	Un cliente può decidere di annullare una prenotazione;
+	13	Il sistema non dovrà effettuare alcun addebito se l’annullamento della prenotazione avverrà almeno 48 ore prima della data di inizio del soggiorno;
+	14	Il sistema dovrà effettuare un addebito pari al costo del soggiorno prenotato se l’annullamento della prenotazione 
+              non avverrà almeno 48 ore prima della data di inizio del soggiorno; 
+	15	Il sistema deve offrire agli amministratori una funzionalità per aggiungere un B&B; 
+	16	Il sistema deve offrire agli amministratori una funzionalità per modificare un B&B;
+	17	Il sistema deve offrire agli amministratori una funzionalità per rimuovere un B&B;
+	18	Il sistema deve offrire agli amministratori una funzionalità per inserire un servizio aggiuntivo; 
+	19	Il sistema deve offrire agli amministratori una funzionalità per modificare un servizio aggiuntivo;
+	20	Il sistema deve offrire agli amministratori una funzionalità per rimuovere un servizio aggiuntivo;
+	21	Il sistema deve offrire agli amministratori una funzionalità per accedere al report sulle prenotazioni e sulla struttura;
+	22	I report devono includere incassi totali in un dato intervallo di tempo, B&B che è stato affittato per più tempo, 
+        e lista dei B&B con relative valutazioni degli utenti.
+
+2.3 Glossario dei termini
+Terimine            |  Descrizione                                  | Sinonimi      
+B&B                 |  Bed and Breakfast                            |
+Posti letto         |  Numero massimo di clienti che possono        | Capienza 
+                    |  soggiornare contemporaneamente all’interno   |
+                    |  dello stesso B&BCapienza                     |
+Servizio aggiuntivo |  Servizi di cui solo alcuni B&B sono provvisti| 
+                    |   (colazione, pulizia giornaliera, etc…)      |
+                    |                                               |
+Utente registrato   |                                               |
+Valutazione         | Metrica tramite la quale il cliente esprime   | Recensione
+                    | un’opinione sul soggiorno nella sua           |
+                    | complessità                                   |
+
+2.4 Classificazione dei requisiti
+2.4.1 Requisiti funzionali
+
+RF01: Il sistema deve offrire all’utente la possibilità di registrarsi (4)
+RF02: Il sistema deve consentire agli utenti registrati di visualizzare
+     l’elenco di tutti i B&B presenti nel sistema (6)
+RF03: Il sistema, durante la visualizzazione, deve consentire agli utenti registrati
+      di filtrare i B&B in base alla loro località (7)
+RF04: Il sistema deve consentire agli utenti registrati di prenotare un B&B per un determinato periodo (8)
+RF05: Il sistema deve consentire all’utente di visualizzare 
+      tutti i B&B liberi nelle date selezionate (9)
+RF06: Un cliente può dare una valutazione da 1 a 5 alla struttura in cui ha soggiornato (11)
+RF07: Un cliente può decidere di annullare una prenotazione (12)
+RF08: Il sistema offre una funzionalità per annullare la prenotazione effettuata (13)
+RF09: Il sistema deve offrire agli amministratori una funzionalità per aggiungere un B&B (15)
+RF10: Il sistema deve offrire agli amministratori una funzionalità per modificare un B&B (16)
+RF11: Il sistema deve offrire agli amministratori una funzionalità per rimuovere un B&B (17)
+RF12: Il sistema deve offrire agli amministratori una funzionalità per inserire un servizio aggiuntivo (18)
+RF13: Il sistema deve offrire agli amministratori una funzionalità per modificare un servizio aggiuntivo (19)
+RF14: Il sistema deve offrire agli amministratori una funzionalità per rimuovere un servizio aggiuntivo (20)
+RF15: Il sistema deve offrire agli amministratori una funzionalità per accedere al 
+      report sulle prenotazioni e sulla struttura (21)
+
+2.4.2 Requisiti sui dati
+RD01: Ogni B&B è caratterizzato da un nome, dal numero di posti letto, località media delle recensioni,
+      costo giornaliero per il pernottamento (1)
+RD02: Ogni B&B è caratterizzato da un elenco di servizi aggiuntivi (2) 
+RD03: Ogni servizio aggiuntivo è caratterizzato da un costo giornaliero (3)
+RD04: Una prenotazione è caratterizzata da un ID, dal costo totale, dalla data e dal nome del cliente (10)
+ 
+2.4.3 Vincoli / Altri requisiti
+V01: Una prenotazione può essere effettuata solo se il B&B è disponibile nell’arco di tempo specificato (8)
+V02: Il cliente può inserire una valutazione solo al termine di un soggiorno (11)
+V03: Al cliente non verrà addebitato l’intero importo del soggiorno se l’annullamento della prenotazione 
+     verrà effettuato entro le 48 ore dall’inizio del soggiorno (13)
+V04: Al cliente verrà addebitato l’intero importo del soggiorno se l’annullamento della prenotazione
+     verrà effettuato oltre le 48 ore dall’inizio del soggiorno (14)
+RNF01: Il sistema deve offrire all’utente un’interfaccia grafica (5)
+RNF02: I report devono includere incassi totali in un dato intervallo di tempo, B&B che è stato
+       affittato per più tempo, e lista dei B&B con relative valutazioni degli utenti (22)
